@@ -1,0 +1,69 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Multiplier API",
+    "version": "1.0",
+    "description": "Multiplier (usemultiplier.com) global employment platform. The Multiplier API is an integration surface accessed with account-provisioned Service User tokens, not an open self-serve API. Multiplier does not publish an endpoint-level public reference, so this collection documents the authenticated resource areas (members, contracts, payroll, payments, time off, invoices) as folders without fabricated request paths. The Authorization header carries the Service User token. Not to be confused with docs.multiplierhq.com, an unrelated product."
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "apikey": {
+        "key": "Authorization",
+        "value": "{{serviceUserToken}}",
+        "in": "header"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Members",
+        "type": "folder"
+      },
+      "docs": "Employees and contractors managed by Multiplier, synchronized with external HRIS platforms. No public endpoint paths are documented by Multiplier.",
+      "items": []
+    },
+    {
+      "info": {
+        "name": "Contracts",
+        "type": "folder"
+      },
+      "docs": "Employment and contractor agreement data. No public endpoint paths are documented by Multiplier.",
+      "items": []
+    },
+    {
+      "info": {
+        "name": "Payroll",
+        "type": "folder"
+      },
+      "docs": "Multi-country payroll and compensation data across 120+ currencies. No public endpoint paths are documented by Multiplier.",
+      "items": []
+    },
+    {
+      "info": {
+        "name": "Payments",
+        "type": "folder"
+      },
+      "docs": "Payment and disbursement data for members and contractors. No public endpoint paths are documented by Multiplier.",
+      "items": []
+    },
+    {
+      "info": {
+        "name": "Time Off",
+        "type": "folder"
+      },
+      "docs": "Leave requests, balances, regional holidays, and timesheets. No public endpoint paths are documented by Multiplier.",
+      "items": []
+    },
+    {
+      "info": {
+        "name": "Invoices",
+        "type": "folder"
+      },
+      "docs": "Invoice and billing data for employment and payroll services. No public endpoint paths are documented by Multiplier.",
+      "items": []
+    }
+  ],
+  "bundled": true
+}

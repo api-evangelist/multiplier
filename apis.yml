@@ -1,0 +1,146 @@
+aid: multiplier
+url: https://raw.githubusercontent.com/api-evangelist/multiplier/refs/heads/main/apis.yml
+name: Multiplier
+kind: company
+description: Multiplier (usemultiplier.com) is a global employment platform offering
+  Employer of Record (EOR), Contractor management, and Global Payroll across 150+
+  countries. Its API surface is integration-oriented - token-authenticated connections
+  used to sync members (employees and contractors), employment contracts, payroll,
+  payments, time off, and invoices between Multiplier and external HRIS systems such
+  as Workday, HiBob, BambooHR, and Personio. Multiplier does not publish an open,
+  self-serve public REST/GraphQL API reference; API access is provisioned per account
+  via Service User tokens. Not to be confused with unrelated companies named
+  "Multiplier".
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- EOR
+- Global Employment
+- Payroll
+- HR
+- Contractors
+created: '2026-06-21'
+modified: '2026-06-21'
+specificationVersion: '0.19'
+apis:
+- aid: multiplier:members-api
+  name: Multiplier Members API
+  tags:
+  - Members
+  - Employees
+  - Contractors
+  - HRIS
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://help.usemultiplier.com/en/collections/8774534-integrations
+  baseURL: https://api.usemultiplier.com
+  properties:
+  - url: https://help.usemultiplier.com/en/collections/8774534-integrations
+    type: Documentation
+  - url: openapi/multiplier-openapi.yml
+    type: OpenAPI
+  description: Token-authenticated synchronization of Multiplier members - employees
+    and contractors - and their profile, employment, and status data with external
+    HRIS platforms. Exposed through Multiplier's integration program rather than an
+    open public endpoint catalog; the base URL is representative and is not publicly
+    documented.
+- aid: multiplier:contracts-api
+  name: Multiplier Contracts API
+  tags:
+  - Contracts
+  - Employment
+  - Onboarding
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://help.usemultiplier.com/en/collections/8774534-integrations
+  baseURL: https://api.usemultiplier.com
+  properties:
+  - url: https://help.usemultiplier.com/en/collections/8774534-integrations
+    type: Documentation
+  - url: openapi/multiplier-openapi.yml
+    type: OpenAPI
+  description: Employment and contractor agreement data - contract generation, terms,
+    and lifecycle status - made available to integrations. Access is provisioned per
+    account; no open public endpoint reference is published.
+- aid: multiplier:payroll-api
+  name: Multiplier Payroll API
+  tags:
+  - Payroll
+  - Compensation
+  - Global Payroll
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://help.usemultiplier.com/en/collections/8774534-integrations
+  baseURL: https://api.usemultiplier.com
+  properties:
+  - url: https://help.usemultiplier.com/en/collections/8774534-integrations
+    type: Documentation
+  - url: openapi/multiplier-openapi.yml
+    type: OpenAPI
+  description: Multi-country payroll data sync - salary, compensation changes, and
+    payroll runs across 120+ currencies. Surfaced to HRIS integrations (for example
+    the Workday API integration, an alternative to PECI file exchange). No open public
+    endpoint reference is published.
+- aid: multiplier:payments-api
+  name: Multiplier Payments API
+  tags:
+  - Payments
+  - Disbursements
+  - Contractors
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://help.usemultiplier.com/en/collections/8774534-integrations
+  baseURL: https://api.usemultiplier.com
+  properties:
+  - url: https://help.usemultiplier.com/en/collections/8774534-integrations
+    type: Documentation
+  - url: openapi/multiplier-openapi.yml
+    type: OpenAPI
+  description: Payment and disbursement data for members and contractors. Available
+    to integrations under account-provisioned tokens; no open public endpoint
+    reference is published.
+- aid: multiplier:time-off-api
+  name: Multiplier Time Off API
+  tags:
+  - Time Off
+  - Leave
+  - Timesheets
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://help.usemultiplier.com/en/collections/8774534-integrations
+  baseURL: https://api.usemultiplier.com
+  properties:
+  - url: https://help.usemultiplier.com/en/collections/8774534-integrations
+    type: Documentation
+  - url: openapi/multiplier-openapi.yml
+    type: OpenAPI
+  description: Leave requests, balances, and regional holiday data with per-country
+    leave policy rules, plus timesheets. Made available to HRIS integrations; no open
+    public endpoint reference is published.
+- aid: multiplier:invoices-api
+  name: Multiplier Invoices API
+  tags:
+  - Invoices
+  - Billing
+  - Finance
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://help.usemultiplier.com/en/collections/8774534-integrations
+  baseURL: https://api.usemultiplier.com
+  properties:
+  - url: https://help.usemultiplier.com/en/collections/8774534-integrations
+    type: Documentation
+  - url: openapi/multiplier-openapi.yml
+    type: OpenAPI
+  description: Consolidated invoice and billing data for employment, payroll, and
+    contractor services. Available to integrations under account-provisioned tokens;
+    no open public endpoint reference is published.
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/usemultiplier
+- type: Website
+  url: https://www.usemultiplier.com
+- type: Documentation
+  url: https://help.usemultiplier.com/en/collections/8774534-integrations
+- type: Plans
+  url: plans/multiplier-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/multiplier-rate-limits.yml
+- type: FinOps
+  url: finops/multiplier-finops.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

@@ -1,0 +1,128 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Multiplier
+providerId: multiplier
+created: '2026-06-21'
+modified: '2026-06-21'
+reconciled: false
+tags:
+- EOR
+- Global Employment
+- Payroll
+- HR
+- Contractors
+- Plans
+description: >-
+  Multiplier prices its global employment products on a flat, per-seat
+  subscription basis with no onboarding, setup, or standard termination fees.
+  Published headline rates are Employer of Record (EOR) from $400 per employee
+  per month and Contractor management at $40 per active contract per month.
+  Global Payroll and large-team EOR are quoted per engagement and vary by
+  country, so full pricing is sales-led. API access is not a separately priced
+  product; it is provisioned to existing customers and partners as part of the
+  platform subscription. These figures are reconciled false pending direct
+  confirmation, since country-specific costs and discounts are negotiated.
+notes: >-
+  Headline rates are drawn from Multiplier's public pricing and comparison
+  pages and third-party reviews; actual per-country EOR costs, payroll pricing,
+  and volume discounts are quoted by Multiplier sales. Verify on the pricing
+  page during reconciliation.
+sources:
+- https://www.usemultiplier.com/pricing
+- https://www.usemultiplier.com/product/employer-of-record-services
+- https://www.usemultiplier.com/employer-of-record/employer-of-record-cost
+plans:
+- id: multiplier-eor
+  name: Employer of Record (EOR)
+  type: subscription
+  description: >-
+    Full EOR service - employment contracts, payroll, compliance, benefits and
+    insurance, visas and work permits, and HRMS modules - billed flat per
+    employee per month with no onboarding or setup fees. Country-specific costs
+    are quoted by sales.
+  entries:
+  - label: EOR per employee
+    name: eor_employee
+    type: flat
+    metric: seat
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: from $400 per employee per month (country-dependent; contact sales)
+    userMultiplied: true
+  elements:
+  - name: Employment Contract Management
+  - name: Multi-Country Payroll
+  - name: Compliance
+  - name: Benefits and Insurance
+  - name: Visas and Work Permits
+  - name: Leave and Timesheets
+- id: multiplier-contractors
+  name: Contractor Management
+  type: subscription
+  description: >-
+    Onboarding, contracts, and payments for international contractors and
+    freelancers, billed per active contract per month.
+  entries:
+  - label: Per active contract
+    name: contractor_contract
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $40 per active contract per month
+    userMultiplied: true
+  elements:
+  - name: Contractor Contracts
+  - name: Contractor Payments
+  - name: Compliance
+- id: multiplier-global-payroll
+  name: Global Payroll
+  type: enterprise
+  description: >-
+    Multi-country payroll for entities you already own, across 120+
+    currencies. Priced per engagement and quoted by sales.
+  entries:
+  - label: Global Payroll Agreement
+    name: global_payroll
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: contact sales
+    userMultiplied: false
+  elements:
+  - name: Payroll Processing
+  - name: Multi-Currency Disbursement
+  - name: Payroll Compliance
+- id: multiplier-enterprise
+  name: Enterprise
+  type: enterprise
+  description: >-
+    Large-team and multi-product agreements with volume pricing, dedicated
+    support, and HRIS integrations (Workday, HiBob, BambooHR, Personio) using
+    Service User API tokens. Negotiated terms.
+  entries:
+  - label: Enterprise Agreement
+    name: enterprise
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: contact sales
+    userMultiplied: false
+  elements:
+  - name: Volume Pricing
+  - name: HRIS Integrations
+  - name: Dedicated Support
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

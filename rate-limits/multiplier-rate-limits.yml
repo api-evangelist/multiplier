@@ -1,0 +1,61 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Multiplier
+providerId: multiplier
+created: '2026-06-21'
+modified: '2026-06-21'
+reconciled: false
+tags:
+- EOR
+- Global Employment
+- Payroll
+- HR
+- Contractors
+- Rate Limiting
+- Quotas
+- Throttling
+description: >-
+  Multiplier does not publish public API rate limits. The Multiplier API is an
+  integration surface accessed with account-provisioned Service User tokens
+  rather than an open self-serve API, and the company does not document an
+  endpoint-level reference or any associated request quotas. Multiplier's own
+  guidance notes that its direct API integration can support a higher frequency
+  of data sync than scheduled PECI file exchange, implying throttling is managed
+  per integration, but specific RPM/RPD/concurrency values are not documented.
+  Any limits should be confirmed directly with Multiplier during integration
+  onboarding.
+notes: >-
+  No public rate-limit documentation exists for Multiplier as of the creation
+  date. Values below are placeholders; confirm with Multiplier's integrations
+  or partnerships team during reconciliation.
+sources:
+- https://help.usemultiplier.com/en/collections/8774534-integrations
+- https://help.usemultiplier.com/en/articles/8984831-multiplier-s-integration-with-workday-via-api
+responseCodes:
+  throttled: see provider documentation
+limits:
+- name: API Request Rate
+  scope: account
+  metric: requests
+  limit: not documented
+  notes: No public RPM/RPD figures; confirm per-integration limits with Multiplier.
+- name: Sync Frequency
+  scope: integration
+  metric: sync
+  limit: not documented
+  notes: >-
+    Direct API integration supports higher sync frequency than scheduled PECI
+    file exchange; exact cadence is configured per integration.
+policies:
+- name: Account-Provisioned Access
+  description: >-
+    API access is granted via Service User tokens created by an account
+    administrator; throttling is managed per account and integration.
+- name: Backoff Strategy
+  description: >-
+    Standard practice - clients should implement retries with exponential
+    backoff and honor any Retry-After signaling if returned.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

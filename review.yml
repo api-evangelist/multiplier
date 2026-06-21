@@ -1,0 +1,104 @@
+aid: multiplier
+name: Multiplier
+review:
+  question: Does Multiplier (usemultiplier.com) expose a documented public API?
+  answer: false
+  date: '2026-06-21'
+  reviewer: API Evangelist
+  apiAvailability: integration-only
+  disambiguationNote: |
+    Multiple unrelated companies and projects use the name "Multiplier". This
+    profile covers ONLY Multiplier the global employment / EOR & payroll platform
+    at usemultiplier.com. It is NOT:
+      - docs.multiplierhq.com, a separate product (an AI/virtual-agent style
+        service) whose public API documents request-access / get-access-types
+        endpoints. Despite the similar name and "API Documentation" page, this is
+        a different product and its endpoints were intentionally excluded.
+      - trailofbits/multiplier (a code-auditing tool on GitHub), multiplierx, or
+        other unrelated GitHub orgs/topics named "multiplier".
+findings:
+  summary: |
+    Multiplier (usemultiplier.com) operates a global employment platform - EOR,
+    Contractor management, and Global Payroll across 150+ countries. It has a
+    real but integration-oriented API rather than an open, self-serve public API.
+    Access is provisioned per account: an administrator creates a Service User
+    and a paired API token in Multiplier's Configuration area, and the token is
+    passed in the Authorization header. The API is used to power HRIS
+    integrations - notably a direct Workday API integration (an alternative to
+    PECI file exchange), plus HiBob, BambooHR, and Personio - synchronizing
+    members (employees and contractors), contracts, payroll, payments, time off,
+    and invoices. Multiplier does NOT publish an endpoint-level public API
+    reference; there is no public list of REST paths, no documented GraphQL
+    schema, and no published base URL or rate limits. Because no endpoints are
+    publicly documented, the OpenAPI definition in this repo carries an empty
+    paths object and documents only the auth model and resource scope, with no
+    fabricated endpoints. Base URLs in the catalog are representative
+    placeholders.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: >-
+        Integration access is token-authenticated over HTTPS, but Multiplier does
+        not publish an endpoint-level REST reference, base URL, or schemas.
+    - protocol: GraphQL
+      scheme: https
+      documented: false
+      note: >-
+        No documented public GraphQL API or schema was found for usemultiplier.com.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket or realtime API is documented.
+  authentication:
+    model: Service User API token
+    header: Authorization
+    note: >-
+      Tokens are created by an account administrator under Multiplier's
+      Configuration / API Tokens area and reused or rotated per integration.
+  resourcesReferenced:
+    - Members (employees and contractors)
+    - Contracts
+    - Payroll
+    - Payments
+    - Time Off
+    - Invoices
+  documentedIntegrations:
+    - Workday (direct API integration; alternative to PECI file exchange)
+    - HiBob
+    - BambooHR
+    - Personio
+    - JumpCloud (SSO/identity)
+sources:
+  - url: https://www.usemultiplier.com/
+    type: Website
+    note: Global employment platform overview - EOR, payroll, contractors, 150+ countries.
+  - url: https://help.usemultiplier.com/en/collections/8774534-integrations
+    type: Documentation
+    note: Integrations help center (auth-gated in places); references API-based HRIS sync.
+  - url: https://help.usemultiplier.com/en/articles/8984831-multiplier-s-integration-with-workday-via-api
+    type: Documentation
+    note: >-
+      Workday-via-API integration; uses Service User tokens; API supports higher
+      sync frequency than PECI. No public endpoint reference.
+  - url: https://www.usemultiplier.com/pricing
+    type: Pricing
+    note: Flat pricing - EOR from $400/employee/month, contractors $40/active contract/month; full quotes sales-led.
+  - url: https://docs.multiplierhq.com/en/articles/10384701-multiplier-api-documentation
+    type: Documentation
+    note: >-
+      DIFFERENT product. Documents request-access / get-access-types endpoints on
+      app.multiplierhq.com. Excluded - not the usemultiplier.com platform.
+actions:
+  openapiPath: openapi/multiplier-openapi.yml
+  openapiPathsEmpty: true
+  apisYmlCreated: true
+  reason: |
+    Multiplier exposes an integration API but publishes no public endpoint
+    reference. To avoid fabrication, the OpenAPI document declares an empty paths
+    object and documents the Service User token auth scheme and resource scope
+    only. Plans, rate-limits, and finops are marked reconciled false where values
+    are sales-led or undocumented.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

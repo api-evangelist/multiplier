@@ -1,0 +1,68 @@
+{
+  "info": {
+    "name": "Multiplier API",
+    "description": "Multiplier (usemultiplier.com) global employment platform. The Multiplier API is an integration surface accessed with account-provisioned Service User tokens, not an open self-serve API. Multiplier does not publish an endpoint-level public reference, so this collection documents the authenticated resource areas (members, contracts, payroll, payments, time off, invoices) as folders without fabricated request paths. The Authorization header carries the Service User token. Not to be confused with docs.multiplierhq.com, an unrelated product.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{serviceUserToken}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.usemultiplier.com",
+      "description": "Representative base URL; not an officially published value."
+    },
+    {
+      "key": "serviceUserToken",
+      "value": "",
+      "description": "Service User API token created by an account administrator in Multiplier's Configuration area."
+    }
+  ],
+  "item": [
+    {
+      "name": "Members",
+      "description": "Employees and contractors managed by Multiplier, synchronized with external HRIS platforms. No public endpoint paths are documented by Multiplier.",
+      "item": []
+    },
+    {
+      "name": "Contracts",
+      "description": "Employment and contractor agreement data. No public endpoint paths are documented by Multiplier.",
+      "item": []
+    },
+    {
+      "name": "Payroll",
+      "description": "Multi-country payroll and compensation data across 120+ currencies. No public endpoint paths are documented by Multiplier.",
+      "item": []
+    },
+    {
+      "name": "Payments",
+      "description": "Payment and disbursement data for members and contractors. No public endpoint paths are documented by Multiplier.",
+      "item": []
+    },
+    {
+      "name": "Time Off",
+      "description": "Leave requests, balances, regional holidays, and timesheets. No public endpoint paths are documented by Multiplier.",
+      "item": []
+    },
+    {
+      "name": "Invoices",
+      "description": "Invoice and billing data for employment and payroll services. No public endpoint paths are documented by Multiplier.",
+      "item": []
+    }
+  ]
+}

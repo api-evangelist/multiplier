@@ -1,0 +1,104 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: Multiplier
+providerId: multiplier
+created: '2026-06-21'
+modified: '2026-06-21'
+reconciled: false
+tags:
+- EOR
+- Global Employment
+- Payroll
+- HR
+- Contractors
+- FinOps
+- Cost Management
+- FOCUS
+description: >-
+  FinOps view of Multiplier spend. Multiplier bills flat per-seat subscription
+  fees - EOR from $400 per employee per month and Contractor management at $40
+  per active contract per month - plus pass-through employment costs (salaries,
+  taxes, benefits, statutory contributions) and Global Payroll fees that vary by
+  country and are quoted by sales. Cost is driven by active headcount, country
+  mix, and currency, not by API call volume; the API itself is not separately
+  metered. Figures are reconciled false pending direct confirmation.
+notes: >-
+  Per-country EOR costs, payroll pricing, and volume discounts are negotiated
+  with Multiplier sales; verify against current pricing during reconciliation.
+sources:
+- https://www.usemultiplier.com/pricing
+- https://www.usemultiplier.com/employer-of-record/employer-of-record-cost
+- https://focus.finops.org/focus-specification/v1-3/
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: Multiplier
+serviceCategory: Human Resources and Global Employment
+billingModel:
+  pricingCategory: Subscription
+  billingFrequency: Monthly
+  billingCurrency: USD
+  chargeCategories:
+  - Usage
+  - Purchase
+meters:
+- name: eor_employee_seats
+  description: Active EOR employees billed per seat per month (from $400/employee).
+  unit: seats
+  aggregation: sum
+  dimensions:
+  - account
+  - country
+  - currency
+- name: contractor_contracts
+  description: Active contractor contracts billed per contract per month ($40/contract).
+  unit: contracts
+  aggregation: sum
+  dimensions:
+  - account
+  - country
+- name: payroll_runs
+  description: Global Payroll processing fees, quoted per engagement and per country.
+  unit: runs
+  aggregation: sum
+  dimensions:
+  - account
+  - country
+  - currency
+- name: pass_through_employment_costs
+  description: >-
+    Salaries, taxes, benefits, and statutory contributions disbursed on behalf
+    of the customer, billed as pass-through plus the management fee.
+  unit: currency
+  aggregation: sum
+  dimensions:
+  - account
+  - country
+  - currency
+focusColumns:
+  ServiceName: Multiplier Global Employment
+  ServiceCategory: Human Resources and Global Employment
+  ProviderName: Multiplier
+  PublisherName: Multiplier
+  InvoiceIssuerName: Multiplier
+  BillingCurrency: USD
+  ChargeCategory: Usage
+  PricingCategory: Subscription
+principles:
+- name: Visibility
+  description: Track active EOR headcount and contractor contracts per country and currency.
+- name: Allocation
+  description: Map seats and contracts to internal teams and cost centers; tag by country.
+- name: Optimization
+  description: >-
+    Right-size EOR vs. contractor vs. owned-entity payroll per country; consolidate
+    headcount to negotiate volume pricing.
+- name: Accountability
+  description: Review monthly invoices against forecasted headcount and country mix.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
