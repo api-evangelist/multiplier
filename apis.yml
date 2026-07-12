@@ -129,6 +129,10 @@ apis:
     contractor services. Available to integrations under account-provisioned tokens;
     no open public endpoint reference is published.
 common:
+- type: DomainSecurity
+  url: security/multiplier-domain-security.yml
+- type: Authentication
+  url: authentication/multiplier-authentication.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/usemultiplier
 - type: Website

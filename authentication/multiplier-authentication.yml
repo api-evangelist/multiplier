@@ -1,0 +1,18 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/multiplier-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: ServiceUserToken
+  type: apiKey
+  in: header
+  parameter: Authorization
+  description: Service User API token created by an account administrator in Multiplier's Configuration
+    area and supplied in the Authorization header. Tokens are scoped to the account and its
+    enabled integrations.
+  sources:
+  - openapi/multiplier-openapi.yml
