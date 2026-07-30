@@ -11,7 +11,20 @@ description: Multiplier (usemultiplier.com) is a global employment platform offe
   self-serve public REST/GraphQL API reference; API access is provisioned per account
   via Service User tokens. Not to be confused with unrelated companies named
   "Multiplier".
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Paid · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/multiplier.png
 tags:
 - EOR
 - Global Employment
