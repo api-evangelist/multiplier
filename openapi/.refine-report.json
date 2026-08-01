@@ -1,0 +1,14 @@
+{
+  "provider": "multiplier",
+  "sources": [
+    "multiplier-openapi.yml"
+  ],
+  "outputs": [],
+  "archived": [
+    "archived multiplier-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
