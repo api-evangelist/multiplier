@@ -48,7 +48,7 @@ apis:
   properties:
   - url: https://help.usemultiplier.com/en/collections/8774534-integrations
     type: Documentation
-  - url: openapi/multiplier-openapi.yml
+  - url: openapi/_original/multiplier-openapi.yml
     type: OpenAPI
   description: Token-authenticated synchronization of Multiplier members - employees
     and contractors - and their profile, employment, and status data with external
@@ -67,7 +67,7 @@ apis:
   properties:
   - url: https://help.usemultiplier.com/en/collections/8774534-integrations
     type: Documentation
-  - url: openapi/multiplier-openapi.yml
+  - url: openapi/_original/multiplier-openapi.yml
     type: OpenAPI
   description: Employment and contractor agreement data - contract generation, terms,
     and lifecycle status - made available to integrations. Access is provisioned per
@@ -84,7 +84,7 @@ apis:
   properties:
   - url: https://help.usemultiplier.com/en/collections/8774534-integrations
     type: Documentation
-  - url: openapi/multiplier-openapi.yml
+  - url: openapi/_original/multiplier-openapi.yml
     type: OpenAPI
   description: Multi-country payroll data sync - salary, compensation changes, and
     payroll runs across 120+ currencies. Surfaced to HRIS integrations (for example
@@ -102,7 +102,7 @@ apis:
   properties:
   - url: https://help.usemultiplier.com/en/collections/8774534-integrations
     type: Documentation
-  - url: openapi/multiplier-openapi.yml
+  - url: openapi/_original/multiplier-openapi.yml
     type: OpenAPI
   description: Payment and disbursement data for members and contractors. Available
     to integrations under account-provisioned tokens; no open public endpoint
@@ -119,7 +119,7 @@ apis:
   properties:
   - url: https://help.usemultiplier.com/en/collections/8774534-integrations
     type: Documentation
-  - url: openapi/multiplier-openapi.yml
+  - url: openapi/_original/multiplier-openapi.yml
     type: OpenAPI
   description: Leave requests, balances, and regional holiday data with per-country
     leave policy rules, plus timesheets. Made available to HRIS integrations; no open
@@ -136,7 +136,7 @@ apis:
   properties:
   - url: https://help.usemultiplier.com/en/collections/8774534-integrations
     type: Documentation
-  - url: openapi/multiplier-openapi.yml
+  - url: openapi/_original/multiplier-openapi.yml
     type: OpenAPI
   description: Consolidated invoice and billing data for employment, payroll, and
     contractor services. Available to integrations under account-provisioned tokens;
