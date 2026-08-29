@@ -11,6 +11,17 @@ description: Multiplier (usemultiplier.com) is a global employment platform offe
   self-serve public REST/GraphQL API reference; API access is provisioned per account
   via Service User tokens. Not to be confused with unrelated companies named
   "Multiplier".
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: self-serve
