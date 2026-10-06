@@ -50,7 +50,7 @@ tags_raw:
 - HR
 - Contractors
 created: '2026-06-21'
-modified: '2026-06-21'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
 - aid: multiplier:members-api
@@ -160,6 +160,10 @@ apis:
     contractor services. Available to integrations under account-provisioned tokens;
     no open public endpoint reference is published.
 common:
+- url: https://www.usemultiplier.com/blog
+  type: Blog
+- url: https://www.usemultiplier.com/feed
+  type: BlogRSS
 - type: DomainSecurity
   url: security/multiplier-domain-security.yml
 - type: Authentication
