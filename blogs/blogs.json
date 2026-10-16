@@ -1,0 +1,21 @@
+{
+  "repo": "multiplier",
+  "feeds": [
+    {
+      "source": "https://www.usemultiplier.com/blog",
+      "feed_url": "https://www.usemultiplier.com/blog",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
+      "source": "https://www.usemultiplier.com/feed",
+      "feed_url": "https://www.usemultiplier.com/feed",
+      "title": "",
+      "saved": 4,
+      "method": "feed"
+    }
+  ],
+  "post_count": 4,
+  "fetched": "2026-10-10T13:15:00Z"
+}
