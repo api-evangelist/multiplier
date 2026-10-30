@@ -1,4 +1,4 @@
-# Multiplier (multiplier)
+# Multiplier
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,160 +66,113 @@
 
 Multiplier (usemultiplier.com) is a global employment platform offering Employer of Record (EOR), Contractor management, and Global Payroll across 150+ countries. Its API surface is integration-oriented - token-authenticated connections used to sync members (employees and contractors), employment contracts, payroll, payments, time off, and invoices between Multiplier and external HRIS systems such as Workday, HiBob, BambooHR, and Personio. Multiplier does not publish an open, self-serve public REST/GraphQL API reference; API access is provisioned per account via Service User tokens. Not to be confused with unrelated companies named "Multiplier".
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/multiplier/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/multiplier/refs/heads/main/apis.yml)
+**Areas:** Employer of Record · Global Employment · Payroll · Human Resources · Contractors
 
-## Tags
+## Multiplier on APIs.io
 
-- EOR
-- Global Employment
-- Payroll
-- HR
-- Contractors
+Everything profiled for Multiplier is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/multiplier/](https://apis.io/providers/multiplier/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (6)
 
-- **Created:** 2026-06-21
-- **Modified:** 2026-06-21
+- [Multiplier Members API](https://apis.io/apis/multiplier/members-api/) — Token-authenticated synchronization of Multiplier members - employees and contractors - and their profile, employment, and status data with external HRIS…
+- [Multiplier Contracts API](https://apis.io/apis/multiplier/contracts-api/) — Employment and contractor agreement data - contract generation, terms, and lifecycle status - made available to integrations. Access is provisioned per…
+- [Multiplier Payroll API](https://apis.io/apis/multiplier/payroll-api/) — Multi-country payroll data sync - salary, compensation changes, and payroll runs across 120+ currencies. Surfaced to HRIS integrations (for example the…
+- [Multiplier Payments API](https://apis.io/apis/multiplier/payments-api/) — Payment and disbursement data for members and contractors. Available to integrations under account-provisioned tokens; no open public endpoint reference is…
+- [Multiplier Time Off API](https://apis.io/apis/multiplier/time-off-api/) — Leave requests, balances, and regional holiday data with per-country leave policy rules, plus timesheets. Made available to HRIS integrations; no open…
+- [Multiplier Invoices API](https://apis.io/apis/multiplier/invoices-api/) — Consolidated invoice and billing data for employment, payroll, and contractor services. Available to integrations under account-provisioned tokens; no open…
 
-## API Availability
+### Published properties
 
-Multiplier's API is **not an open, publicly documented self-serve API**. It is an integration surface: customers and partners connect Multiplier to external HRIS, payroll, and identity systems using **Service User tokens** created by an account administrator in Multiplier's Configuration area, passed in an `Authorization` header. Documented partner integrations include Workday (a direct API integration that is an alternative to PECI file exchange), HiBob, BambooHR, and Personio. Because Multiplier does not publish an endpoint-level public API reference, the OpenAPI definition in this repository intentionally carries an empty `paths` object and documents the authentication model and resource scope without fabricating endpoints. The base URLs shown are representative placeholders, not officially published values.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-A separate, unrelated product at `docs.multiplierhq.com` also uses the name "Multiplier" and documents its own `request-access` / `get-access-types` endpoints; it is **not** the usemultiplier.com global employment platform profiled here and has been excluded.
+#### Collections (1)
 
-## APIs
+Postman and Open Collection request collections.
 
-### Multiplier Members API
+- [Multiplier API](https://apis.io/collections/multiplier/open-multiplier/)
 
-Token-authenticated synchronization of Multiplier members - employees and contractors - and their profile, employment, and status data with external HRIS platforms. Exposed through Multiplier's integration program rather than an open public endpoint catalog; the base URL is representative and is not publicly documented.
+#### Security (2)
 
-- **Human URL:** [https://help.usemultiplier.com/en/collections/8774534-integrations](https://help.usemultiplier.com/en/collections/8774534-integrations)
-- **Base URL:** `https://api.usemultiplier.com`
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Tags
+- [Multiplier Authentication](https://apis.io/security/multiplier/multiplier-authentication/)
+- [Multiplier Domain Security](https://apis.io/security/multiplier/multiplier-domain-security/)
 
-- Members
-- Employees
-- Contractors
-- HRIS
+#### Plans and pricing (1)
 
-#### Properties
+Published plans, tiers and prices.
 
-- [Documentation](https://help.usemultiplier.com/en/collections/8774534-integrations)
-- [OpenAPI](openapi/multiplier-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/multiplier.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/multiplier.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Multiplier Plans Pricing](https://apis.io/plans/multiplier/multiplier-plans-pricing/)
 
-### Multiplier Contracts API
+#### Rate limits (1)
 
-Employment and contractor agreement data - contract generation, terms, and lifecycle status - made available to integrations. Access is provisioned per account; no open public endpoint reference is published.
+Published request limits.
 
-- **Human URL:** [https://help.usemultiplier.com/en/collections/8774534-integrations](https://help.usemultiplier.com/en/collections/8774534-integrations)
-- **Base URL:** `https://api.usemultiplier.com`
+- [Multiplier Rate Limits](https://apis.io/rate-limits/multiplier/multiplier-rate-limits/)
 
-#### Tags
+#### FinOps (1)
 
-- Contracts
-- Employment
-- Onboarding
+What the API costs to run, by operation.
 
-#### Properties
+- [Multiplier Finops](https://apis.io/finops/multiplier/multiplier-finops/)
 
-- [Documentation](https://help.usemultiplier.com/en/collections/8774534-integrations)
-- [OpenAPI](openapi/multiplier-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/multiplier.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/multiplier.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+## Where to find this API
 
-### Multiplier Payroll API
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-Multi-country payroll data sync - salary, compensation changes, and payroll runs across 120+ currencies. Surfaced to HRIS integrations (for example the Workday API integration, an alternative to PECI file exchange). No open public endpoint reference is published.
-
-- **Human URL:** [https://help.usemultiplier.com/en/collections/8774534-integrations](https://help.usemultiplier.com/en/collections/8774534-integrations)
-- **Base URL:** `https://api.usemultiplier.com`
-
-#### Tags
-
-- Payroll
-- Compensation
-- Global Payroll
-
-#### Properties
-
-- [Documentation](https://help.usemultiplier.com/en/collections/8774534-integrations)
-- [OpenAPI](openapi/multiplier-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/multiplier.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/multiplier.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Multiplier Payments API
-
-Payment and disbursement data for members and contractors. Available to integrations under account-provisioned tokens; no open public endpoint reference is published.
-
-- **Human URL:** [https://help.usemultiplier.com/en/collections/8774534-integrations](https://help.usemultiplier.com/en/collections/8774534-integrations)
-- **Base URL:** `https://api.usemultiplier.com`
-
-#### Tags
-
-- Payments
-- Disbursements
-- Contractors
-
-#### Properties
-
-- [Documentation](https://help.usemultiplier.com/en/collections/8774534-integrations)
-- [OpenAPI](openapi/multiplier-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/multiplier.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/multiplier.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Multiplier Time Off API
-
-Leave requests, balances, and regional holiday data with per-country leave policy rules, plus timesheets. Made available to HRIS integrations; no open public endpoint reference is published.
-
-- **Human URL:** [https://help.usemultiplier.com/en/collections/8774534-integrations](https://help.usemultiplier.com/en/collections/8774534-integrations)
-- **Base URL:** `https://api.usemultiplier.com`
-
-#### Tags
-
-- Time Off
-- Leave
-- Timesheets
-
-#### Properties
-
-- [Documentation](https://help.usemultiplier.com/en/collections/8774534-integrations)
-- [OpenAPI](openapi/multiplier-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/multiplier.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/multiplier.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Multiplier Invoices API
-
-Consolidated invoice and billing data for employment, payroll, and contractor services. Available to integrations under account-provisioned tokens; no open public endpoint reference is published.
-
-- **Human URL:** [https://help.usemultiplier.com/en/collections/8774534-integrations](https://help.usemultiplier.com/en/collections/8774534-integrations)
-- **Base URL:** `https://api.usemultiplier.com`
-
-#### Tags
-
-- Invoices
-- Billing
-- Finance
-
-#### Properties
-
-- [Documentation](https://help.usemultiplier.com/en/collections/8774534-integrations)
-- [OpenAPI](openapi/multiplier-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/multiplier.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/multiplier.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/usemultiplier)
 - [Website](https://www.usemultiplier.com)
 - [Documentation](https://help.usemultiplier.com/en/collections/8774534-integrations)
-- [Plans](plans/multiplier-plans-pricing.yml)
-- [Rate Limits](rate-limits/multiplier-rate-limits.yml)
-- [Fin Ops](finops/multiplier-finops.yml)
+- [Blog](https://www.usemultiplier.com/blog)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 19.0** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 29.4 |
+| Contract governance | 0.0 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 7.9 |
+
+**Agent readiness 16.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Employment & Payroll
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/multiplier/](https://apis.io/providers/multiplier/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Multiplier: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/multiplier/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
